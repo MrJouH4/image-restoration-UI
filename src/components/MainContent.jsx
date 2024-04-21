@@ -3,20 +3,22 @@ import Navbar from '../components/Navbar/Navbar';
 import { Box } from '@chakra-ui/react';
 import InpaintUploader from './uploaders/InpaintUploader';
 
-const MainContent = () => {
+
+
+const MainContent = ({ item4Content: Item4Component }) => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="container">
-      <div className="item1">1</div>
-      <div className="item2">2</div>
-      <div className="item3">3</div>
-      <div className="item4">
-        <InpaintUploader/>
+        <a href="/inpainting" className="item1"></a>
+        <a href="/deblurring" className="item2"></a>
+        <a href="/denoising" className="item3"></a>
+        <div className="item4">
+          <Item4Component />
+        </div>
       </div>
     </div>
-    </div>
   );
-}
+};
 
 export default MainContent;
